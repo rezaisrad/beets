@@ -318,7 +318,8 @@ class DiscogsPlugin(BeetsPlugin):
         artist_id = url_result['artists'][0]['id']
 
         album = url_result['title']
-        album_id = None
+        album_id = url_result['id']
+
         # Use `.data` to access the tracklist directly instead of the
         # convenient `.tracklist` property, which will strip out useful artist
         # information and leave us with skeleton `Artist` objects that will
